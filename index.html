@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全域境智能垃圾收运体系 | 以智能破局环卫困局，用科技守护生态初心</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* 全局样式 */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* 头部样式 */
+        header {
+            position: relative;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            border-bottom: 5px solid #ffc107;
+            background: 
+                linear-gradient(to right, rgba(13, 76, 181, 0.85), rgba(9, 59, 140, 0.9)),
+                url('biaoshi.jpg') center/contain no-repeat;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-position: center 70%;
+        }
+
+        .header-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(13, 76, 181, 0.3);
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            background-color: rgba(13, 76, 181, 0.7);
+            padding: 40px;
+            border-radius: 15px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+            font-weight: 700;
+            letter-spacing: 1.5px;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            opacity: 0.95;
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.8;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+            font-weight: 300;
+        }
+
+        /* 产品描述部分 */
+        .product-section {
+            padding: 100px 0;
+            background-color: white;
+            position: relative;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 60px;
+            color: #0d4cb5;
+            position: relative;
+            padding-bottom: 25px;
+            font-weight: 600;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 6px;
+            background-color: #ffc107;
+            border-radius: 3px;
+        }
+
+        .product-description {
+            font-size: 1.3rem;
+            max-width: 1100px;
+            margin: 0 auto 60px;
+            text-align: center;
+            line-height: 2.0;
+            color: #444;
+        }
+
+        /* 竖向排布特征部分 */
+        .features {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            margin-top: 60px;
+            max-width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .feature {
+            background-color: #f0f7ff;
+            padding: 45px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            border-left: 8px solid #1a6dfc;
+            transition: all 0.4s ease;
+            display: flex;
+            align-items: flex-start;
+            min-height: 200px;
+        }
+
+        .feature:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(26, 109, 252, 0.15);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: #0d4cb5;
+            margin-right: 30px;
+            min-width: 80px;
+            text-align: center;
+            background: rgba(26, 109, 252, 0.1);
+            border-radius: 50%;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .feature-content {
+            flex: 1;
+        }
+
+        .feature h3 {
+            color: #0d4cb5;
+            margin-bottom: 25px;
+            font-size: 1.7rem;
+            font-weight: 600;
+        }
+
+        .feature p {
+            font-size: 1.2rem;
+            line-height: 1.9;
+            color: #555;
+        }
+
+        /* 营销计划部分 */
+        .plans-section {
+            padding: 100px 0;
+            background-color: #f0f7ff;
+            position: relative;
+        }
+
+        /* 竖向排布营销计划 */
+        .plans-container {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            margin-top: 60px;
+            max-width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .plan-card {
+            background-color: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            min-height: 300px;
+        }
+
+        @media (min-width: 992px) {
+            .plan-card {
+                flex-direction: row;
+                height: 320px;
+            }
+        }
+
+        .plan-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.18);
+        }
+
+        .plan-image {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-bottom: 3px solid #ffc107;
+        }
+
+        @media (min-width: 992px) {
+            .plan-image {
+                width: 45%;
+                height: 100%;
+                border-bottom: none;
+                border-right: 3px solid #ffc107;
+            }
+        }
+
+        .plan-content {
+            padding: 40px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .plan-title {
+            color: #0d4cb5;
+            margin-bottom: 25px;
+            font-size: 1.9rem;
+            font-weight: 600;
+        }
+
+        .plan-summary {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.15rem;
+            line-height: 1.8;
+        }
+
+        .plan-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #1a6dfc 0%, #0d4cb5 100%);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            font-size: 1.1rem;
+            cursor: pointer;
+            width: 220px;
+            text-align: center;
+            align-self: flex-start;
+            box-shadow: 0 5px 15px rgba(26, 109, 252, 0.3);
+        }
+
+        .plan-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(26, 109, 252, 0.4);
+        }
+
+        /* 用户评价部分 */
+        .reviews-section {
+            padding: 100px 0;
+            background-color: white;
+            position: relative;
+        }
+
+        .section-intro {
+            text-align: center;
+            font-size: 1.3rem;
+            color: #666;
+            max-width: 1000px;
+            margin: 0 auto 60px;
+            line-height: 1.9;
+        }
+
+        /* 竖向排布用户评价 */
+        .reviews-container {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            margin-top: 60px;
+            max-width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .review-card {
+            background-color: #f8f9fa;
+            border-radius: 20px;
+            padding: 45px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border-left: 8px solid #1a6dfc;
+            transition: all 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            min-height: 250px;
+        }
+
+        .review-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(26, 109, 252, 0.12);
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .review-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #1a6dfc 0%, #0d4cb5 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+            color: white;
+            font-weight: bold;
+            margin-right: 25px;
+            box-shadow: 0 5px 15px rgba(13, 76, 181, 0.3);
+        }
+
+        .review-user {
+            flex: 1;
+        }
+
+        .review-name {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .review-role {
+            color: #666;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        .review-rating {
+            color: #ffc107;
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            letter-spacing: 3px;
+        }
+
+        .review-content {
+            color: #555;
+            line-height: 1.9;
+            font-style: italic;
+            position: relative;
+            font-size: 1.2rem;
+            padding-left: 20px;
+        }
+
+        .review-content::before {
+            content: '"';
+            font-size: 5rem;
+            color: #e0e7ff;
+            position: absolute;
+            top: -30px;
+            left: -15px;
+            font-family: Georgia, serif;
+            opacity: 0.8;
+        }
+
+        /* 蓝色联系模块部分 */
+        .contact-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #0d4cb5 0%, #093b8c 100%);
+            color: white;
+            position: relative;
+        }
+
+        /* 竖向排布联系信息 */
+        .contact-container {
+            display: flex;
+            flex-direction: column;
+            gap: 70px;
+            margin-top: 60px;
+        }
+
+        .contact-info, .quick-links, .marketing-plans {
+            width: 100%;
+        }
+
+        .contact-title {
+            font-size: 2.3rem;
+            margin-bottom: 35px;
+            color: white;
+            position: relative;
+            padding-bottom: 18px;
+            font-weight: 600;
+        }
+
+        .contact-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100px;
+            height: 5px;
+            background-color: #ffc107;
+        }
+
+        .product-info {
+            margin-bottom: 40px;
+        }
+
+        .product-name {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: white;
+            font-weight: 700;
+        }
+
+        .product-tagline {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 40px;
+            font-weight: 600;
+            background-color: #ffc107;
+            color: #333;
+            padding: 15px 25px;
+            border-radius: 8px;
+            display: inline-block;
+            max-width: 700px;
+            box-shadow: 0 5px 15px rgba(255, 193, 7, 0.4);
+        }
+
+        .contact-details {
+            margin-bottom: 50px;
+        }
+
+        .contact-item {
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            font-size: 1.2rem;
+        }
+
+        .contact-item i {
+            margin-right: 20px;
+            color: #ffc107;
+            font-style: normal;
+            font-weight: bold;
+            width: 30px;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .social-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.8rem;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .social-icon:hover {
+            background-color: #ffc107;
+            transform: translateY(-8px);
+            border-color: #ffc107;
+        }
+
+        .links-list, .plans-list {
+            list-style-type: none;
+        }
+
+        .links-list li, .plans-list li {
+            margin-bottom: 22px;
+        }
+
+        .links-list a, .plans-list a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            padding: 10px 0;
+            border-bottom: 2px solid transparent;
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        .links-list a:hover, .plans-list a:hover {
+            color: #ffc107;
+            border-bottom: 2px solid #ffc107;
+        }
+
+        /* 模态窗口样式 */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.85);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .modal {
+            background-color: white;
+            border-radius: 20px;
+            width: 100%;
+            max-width: 1000px;
+            max-height: 85vh;
+            overflow-y: auto;
+            box-shadow: 0 30px 70px rgba(0,0,0,0.5);
+            position: relative;
+            animation: modalFadeIn 0.4s ease;
+        }
+
+        @keyframes modalFadeIn {
+            from { opacity: 0; transform: translateY(-60px) scale(0.95); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        .modal-header {
+            padding: 35px 40px 25px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(135deg, #f0f7ff 0%, #e6f0ff 100%);
+        }
+
+        .modal-title {
+            color: #0d4cb5;
+            font-size: 2.3rem;
+            font-weight: 700;
+        }
+
+        .close-modal {
+            background: none;
+            border: none;
+            font-size: 2.5rem;
+            color: #666;
+            cursor: pointer;
+            line-height: 1;
+            padding: 0;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            border-radius: 50%;
+        }
+
+        .close-modal:hover {
+            color: #333;
+            background-color: rgba(0,0,0,0.05);
+        }
+
+        .modal-body {
+            padding: 35px 40px;
+        }
+
+        .modal-section {
+            margin-bottom: 35px;
+        }
+
+        .modal-section h3 {
+            color: #1a6dfc;
+            margin-bottom: 18px;
+            font-size: 1.7rem;
+            border-left: 6px solid #ffc107;
+            padding-left: 18px;
+            font-weight: 600;
+        }
+
+        .modal-section p {
+            margin-bottom: 18px;
+            line-height: 1.9;
+            font-size: 1.2rem;
+            color: #444;
+        }
+
+        .modal-section ul {
+            padding-left: 30px;
+            margin-bottom: 25px;
+        }
+
+        .modal-section li {
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        /* 为模态窗口设置背景图片 */
+        #star-plan-modal .modal {
+            background: url('xingqi.jpg') center/cover no-repeat;
+        }
+        
+        #city-guardian-modal .modal {
+            background: url('chengshi.jpg') center/cover no-repeat;
+        }
+        
+        #enterprise-plan-modal .modal {
+            background: url('qiye.jpg') center/cover no-repeat;
+        }
+
+        /* 模态窗口内容区域背景 */
+        .modal-header, .modal-body {
+            background-color: rgba(255, 255, 255, 0.85);
+        }
+
+        /* 页脚样式 */
+        footer {
+            background-color: #0a2e6d;
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .footer-text {
+            opacity: 0.9;
+            font-size: 1.15rem;
+            max-width: 1100px;
+            margin: 0 auto;
+            line-height: 1.9;
+            font-weight: 300;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.8rem;
+            }
+            
+            .section-title {
+                font-size: 2.3rem;
+            }
+            
+            .plans-container, .features, .reviews-container, .contact-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .plan-card, .feature, .review-card, .contact-info, .quick-links, .marketing-plans {
+                max-width: 100%;
+                width: 100%;
+            }
+            
+            .modal {
+                max-height: 90vh;
+            }
+            
+            .contact-title {
+                font-size: 2rem;
+            }
+            
+            .product-name {
+                font-size: 2.3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.3rem;
+            }
+            
+            .section-title {
+                font-size: 1.9rem;
+            }
+            
+            .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .container {
+                padding: 0 20px;
+            }
+            
+            .plan-button {
+                width: 100%;
+            }
+            
+            .feature {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px;
+            }
+            
+            .feature-icon {
+                margin-right: 0;
+                margin-bottom: 25px;
+                align-self: center;
+            }
+            
+            .plan-card {
+                min-height: auto;
+            }
+            
+            .contact-item {
+                font-size: 1.1rem;
+            }
+            
+            .product-tagline {
+                font-size: 1.3rem;
+                padding: 12px 20px;
+            }
+            
+            .header-content {
+                padding: 30px 20px;
+            }
+            
+            header {
+                min-height: 400px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.9rem;
+            }
+            
+            .section-title {
+                font-size: 1.6rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+            
+            .plan-content {
+                padding: 25px;
+            }
+            
+            .feature, .review-card {
+                padding: 25px;
+            }
+            
+            .modal-header, .modal-body {
+                padding: 25px;
+            }
+            
+            header {
+                padding: 60px 0;
+                min-height: 350px;
+                background-position: center 60%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 网站头部 -->
+    <header>
+        <div class="header-overlay"></div>
+        <div class="container">
+            <div class="header-content">
+                <h1>全域境智能垃圾收运体系</h1>
+                <p class="subtitle">以智能破局环卫困局，用科技守护生态初心</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- 产品描述部分 -->
+    <section class="product-section">
+        <div class="container">
+            <h2 class="section-title">产品概述</h2>
+            <p class="product-description">
+                全域境智能垃圾收运体系以"智能化、自动化、无人化"为核心，深度融合红外传感、超声波传感与机器人技术，打造集垃圾收集、转运、处理及补给于一体的闭环系统。产品搭载满载自主转运、自动卸货、超声波驱鼠及烟雾警报预警等核心功能，实现从"投放检测-转运-卸货-充电-返回"的全流程自动化作业，适用于校园、小区、企业、公园、工地等多类场景。
+            </p>
+            
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>全流程自动化</h3>
+                        <p>从垃圾检测到转运、卸货、充电全流程无人化操作，极大提高环卫效率，降低人工成本。采用先进的AI算法进行路径规划，确保垃圾收运过程高效、精准，实现7x24小时不间断作业。</p>
+                    </div>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>智能感知系统</h3>
+                        <p>配备多重传感器，实时监测垃圾容量、环境状况、温度湿度等参数，实现精准、高效的垃圾收运管理。通过物联网技术实时上传数据到云端管理平台，实现智能调度与远程监控。</p>
+                    </div>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>多场景适应性</h3>
+                        <p>针对校园、社区、企业园区、公园、商业区、交通枢纽等不同场景设计，灵活应对各类环卫需求。模块化设计可根据不同场景进行快速配置和部署，实现定制化解决方案。</p>
+                    </div>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>环保节能</h3>
+                        <p>采用清洁能源驱动，低噪音运行，配备驱鼠和烟雾报警系统，确保环卫安全与环境友好。智能能源管理系统实现能耗最优化，减少碳排放，助力城市可持续发展。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 营销计划部分 -->
+    <section class="plans-section">
+        <div class="container">
+            <h2 class="section-title">营销计划</h2>
+            <div class="plans-container">
+                <!-- 星契"圾"忆计划 -->
+                <div class="plan-card" id="star-plan-card">
+                    <img src="xingqi.jpg" alt="星契'圾'忆计划" class="plan-image">
+                    <div class="plan-content">
+                        <h3 class="plan-title">星契"圾"忆计划</h3>
+                        <p class="plan-summary">连接粉丝情感与品牌价值的偶像应援计划，将智能垃圾桶打造为粉丝与偶像之间的情感载体，通过共创设计与城市落地实现"应援有形，守护有温度"的互动体验。该计划将环保理念与粉丝文化相结合，打造独特的品牌传播模式。</p>
+                        <button class="plan-button" onclick="openModal('star-plan-modal')">查看详情</button>
+                    </div>
+                </div>
+
+                <!-- 城市守护者公益计划 -->
+                <div class="plan-card" id="city-guardian-card">
+                    <img src="chengshi.jpg" alt="城市守护者公益计划" class="plan-image">
+                    <div class="plan-content">
+                        <h3 class="plan-title">城市守护者公益计划</h3>
+                        <p class="plan-summary">以智能垃圾桶为纽带，深度融合环境关怀与人文关怀的公益计划，旨在传递品牌社会责任并增强公众对公共环境的关注与参与。通过智能技术与公益活动的结合，打造可持续发展的环保生态系统。</p>
+                        <button class="plan-button" onclick="openModal('city-guardian-modal')">查看详情</button>
+                    </div>
+                </div>
+
+                <!-- 企业守护定制计划 -->
+                <div class="plan-card" id="enterprise-plan-card">
+                    <img src="qiye.jpg" alt="企业守护定制计划" class="plan-image">
+                    <div class="plan-content">
+                        <h3 class="plan-title">企业守护定制计划</h3>
+                        <p class="plan-summary">为深耕B端市场推出的企业定制化服务，支持"自用+捐赠"双轨制，助力企业客户履行社会责任，实现品牌建设、员工关怀与社会责任三位一体的价值升华。为企业提供全方位的环保解决方案。</p>
+                        <button class="plan-button" onclick="openModal('enterprise-plan-modal')">查看详情</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 用户评价部分 -->
+    <section class="reviews-section">
+        <div class="container">
+            <h2 class="section-title">用户评价</h2>
+            <p class="section-intro">听听我们的用户如何评价全域境智能垃圾收运体系及其相关活动。我们的用户来自不同行业和场景，他们的真实反馈是我们不断进步的动力。</p>
+            
+            <div class="reviews-container">
+                <!-- 校园管理方评价 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">王</div>
+                        <div class="review-user">
+                            <div class="review-name">王校长</div>
+                            <div class="review-role">某高校后勤负责人</div>
+                        </div>
+                    </div>
+                    <div class="review-rating">★★★★★</div>
+                    <div class="review-content">
+                        "自从引入全域境智能垃圾收运体系，校园环境焕然一新。自动化收运不仅提高了效率，还大大减少了人力成本，学生们也对这种科技感十足的环保方式赞不绝口。特别值得一提的是，系统的智能化管理让我们的环卫工作更加科学高效，垃圾分类准确率提升了40%以上。"
+                    </div>
+                </div>
+                
+                <!-- 社区管理者评价 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">李</div>
+                        <div class="review-user">
+                            <div class="review-name">李主任</div>
+                            <div class="review-role">某社区物业主任</div>
+                        </div>
+                    </div>
+                    <div class="review-rating">★★★★★</div>
+                    <div class="review-content">
+                        "社区引入智能垃圾收运体系后，居民垃圾分类意识明显提升，垃圾清运效率提高了60%。特别是驱鼠和烟雾报警功能，极大改善了社区环境安全。居民们对这种智能化的环卫方式非常满意，投诉率下降了70%以上。我们计划在更多小区推广这套系统。"
+                    </div>
+                </div>
+                
+                <!-- 企业环保负责人评价 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">张</div>
+                        <div class="review-user">
+                            <div class="review-name">张经理</div>
+                            <div class="review-role">某科技园区环保负责人</div>
+                        </div>
+                    </div>
+                    <div class="review-rating">★★★★☆</div>
+                    <div class="review-content">
+                        "我们园区使用全域境智能垃圾收运体系已半年多，不仅实现了垃圾处理的智能化管理，还通过'企业守护定制计划'捐赠了一套给附近的学校，获得了员工和社会的双重好评。系统运行稳定，维护成本低，数据管理功能强大，为我们园区环保工作提供了有力支持。"
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 蓝色联系模块部分 -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-container">
+                <!-- 联系信息 -->
+                <div class="contact-info">
+                    <h2 class="contact-title">联系我们</h2>
+                    <div class="product-info">
+                        <div class="product-name">全域境智能垃圾收运体系</div>
+                        <div class="product-tagline">以智能破局环卫困局，用科技守护生态初心</div>
+                    </div>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i> 德阳城市轨道交通职业学院
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>18384990922   18090915729
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i> 3511930667@qq.com   2124194526@qq.com
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i> 工作日 9:00-18:00
+                        </div>
+                    </div>
+                    
+                    <div class="social-icons">
+                        <div class="social-icon">
+                            <i class="fab fa-weixin"></i>
+                        </div>
+                        <div class="social-icon">
+                            <i class="fab fa-weibo"></i>
+                        </div>
+                        <div class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <div class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 快速链接 -->
+                <div class="quick-links">
+                    <h2 class="contact-title">快速链接</h2>
+                    <ul class="links-list">
+                        <li><a href="#top">首页</a></li>
+                        <li><a href="#about">关于我们</a></li>
+                        <li><a href="#products">产品中心</a></li>
+                        <li><a href="#events">活动资讯</a></li>
+                        <li><a href="#contact">联系我们</a></li>
+                        <li><a href="#faq">常见问题</a></li>
+                        <li><a href="#support">技术支持</a></li>
+                    </ul>
+                </div>
+                
+                <!-- 营销计划列表 -->
+                <div class="marketing-plans">
+                    <h2 class="contact-title">营销计划</h2>
+                    <ul class="plans-list">
+                        <li><a href="#" onclick="openModal('star-plan-modal'); return false;">星契"圾"忆计划</a></li>
+                        <li><a href="#" onclick="openModal('city-guardian-modal'); return false;">城市守护者公益计划</a></li>
+                        <li><a href="#" onclick="openModal('enterprise-plan-modal'); return false;">企业守护定制计划</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <p class="footer-text">© 2026 全域境智能垃圾收运体系 | 以智能破局环卫困局，用科技守护生态初心 | 致力于打造智能化、自动化、无人化的环卫新未来</p>
+        </div>
+    </footer>
+
+    <!-- 模态窗口：星契"圾"忆计划详情 -->
+    <div class="modal-overlay" id="star-plan-modal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2 class="modal-title">星契"圾"忆计划详情</h2>
+                <button class="close-modal" onclick="closeModal('star-plan-modal')">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3>活动背景</h3>
+                    <p>在粉丝文化日益蓬勃的今天，年轻群体渴望通过更具创意与仪式感的方式表达对偶像的支持。为紧密连接粉丝情感与品牌价值，特推出此计划，将智能垃圾桶打造为粉丝与偶像之间的情感载体，通过共创设计与城市落地，实现"应援有形，守护有温度"的品牌互动体验。</p>
+                </div>
+                
+                <div class="modal-section">
+                    <h3>核心口号</h3>
+                    <p>"为偶像设计，为热爱守护"、"你的创意，他的城市印记"</p>
+                </div>
+                
+                <div class="modal-section">
+                    <h3>活动流程</h3>
+                    <ul>
+                        <li><strong>投稿征集期</strong>：30天，参与者提交偶像专属智能垃圾桶的配色、图案、三维模型及设计理念说明。</li>
+                        <li><strong>全民投票期</strong>：30天，所有注册用户可为作品投票，每日3票，分享可获额外投票权。</li>
+                        <li><strong>专业评审期</strong>：5天，结合投票结果进行专业评审。</li>
+                        <li><strong>众筹落地</strong>：入选设计开通众筹通道，粉丝预购支持量产，根据众筹金额比例投放至指定城市。</li>
+                    </ul>
+                </div>
+                
+                <div class="modal-section">
+                    <h3>参与对象</h3>
+                    <p>所有粉丝及创意爱好者（需完成平台账号注册）</p>
+                </div>
+                
+                <div class="modal-section">
+                    <h3>活动时间</h3>
+                    <p>一年两届，每届周期6个月（1月到6月、7月到12月）</p>
+                </div>
+                
+                <div class="modal-section">
+                    <h3>奖励机制</h3>
+                    <p>每届最终选取排行榜前20款设计投入生产，每款产品众筹投入市场后作者会得到10%的利润分成，并为前三名创作者发放奖金2000元。每届投产的垃圾桶仅为两届限定，有效期一年，有限期结束后停止生产相关款式。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 模态窗口：城市守护者公益计划详情 -->
+    <div class="modal-overlay" id="city-guardian-modal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2 class="modal-title">城市守护者公益计划详情</h2>
+                <button class="close-modal" onclick="closeModal('city-guardian-modal')">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3>核心价值与定位</h3>
+                    <p>在城市高速发展的背景下，环卫工人作为维护公共环境的基础力量却常被忽视。本计划以智能垃圾桶产品为纽带，深度融合环境关怀与人文关怀，旨在传递品牌社会责任并增强公众对公共环境的关注与参与，构建一个连接用户、环卫工人、城市与品牌的可持续互动关怀平台，从而深化"智能科技，人文关怀"的品牌形象，实现"环境守护"与"城市守护"的双重价值主张。</p>
+                </div>
+                
+                <div class="modal-section">
+                    <h3>活动内容与流程</h3>
+                    <p>在智能垃圾桶侧面设置公益二维码，用户扫描后进入"城市守护者"公益活动页面，包含3大核心模块：</p>
+                    
+                    <h4>1. 徽章系统</h4>
+                    <ul>
+                        <li><strong>获取规则</strong>：用户首次在某个片区的任意智能垃圾桶扫码，即可自动获得该片区的专属徽章。</li>
+                        <li><strong>徽章墙</strong>：平台内设"我的徽章墙"，以收藏册形式展示，随着探索片区增多不断丰富。</li>
+						<li><strong>徽章内容</strong>：每个片区的徽章都是一幅简约插画风格的地图，清晰标注该片区的标志性地标。</li>
+                        <li><strong>成就系统</strong>：集齐"城市东南西北"四个区域的徽章，可合成"城市巡护者"高级徽章；收集满10个不同片区徽章，可获得"城市探索家"称号。</li>
+                    </ul>
+                    
+                    <h4>2. 致敬城市天使</h4>
+                    <ul>
+                        <li><strong>打赏与留言</strong>：用户可为此片区的环卫工人进行自定义金额打赏，并留言鼓励或分享故事。</li>
+                        <li><strong>故事展示</strong>：每半年公布选取环卫工人的公益故事（经本人同意）及用户精选留言，制作成海报或短视频展示。</li>
+                    </ul>
+                    
+                    <h4>3. 绿色行动基金</h4>
+                    <ul>
+                        <li><strong>项目透明化</strong>：每个公益项目（城市绿化、运动场地维护、沙漠治理等）有清晰介绍、目标金额、执行计划和进展更新。</li>
+                        <li><strong>奖励机制</strong>：每年对捐款前3名的爱心人士进行采访报道，宣传环境保护的重要意义。</li>
+                    </ul>
+                </div>
+                
+                <div class="modal-section">
+                    <h3>社会意义</h3>
+                    <p>通过本计划的深入实施，引起社会各界对环境保护议题以及环卫工人待遇问题的高度关注，提升公众环保意识，推动环卫工人工作条件改善，在履行企业社会责任的同时提升品牌形象。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 模态窗口：企业守护定制计划详情 -->
+    <div class="modal-overlay" id="enterprise-plan-modal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2 class="modal-title">企业守护定制计划详情</h2>
+                <button class="close-modal" onclick="closeModal('enterprise-plan-modal')">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3>活动背景与价值升华</h3>
+                    <p>随着企业愈发重视自身文化、品牌形象与社会责任，办公环境的每一个细节都成为文化与关怀的传递载体。本计划不仅服务于企业内部环境升级，更创新性地支持企业将定制化产品用于公益捐赠，让企业的关怀从内部员工延伸至更广阔的社会角落，实现"品牌建设、员工关怀、社会责任"三位一体的价值升华。</p>
+                </div>
+                
+                <div class="modal-section">
+                    <h3>定制内容（双轨制）</h3>
+                    <p>企业可根据使用场景（自用或捐赠），灵活选择或组合以下定制内容：</p>
+                    
+                    <h4>外观深度定制</h4>
+                    <ul>
+                        <li><strong>自用场景</strong>：样式、形状、企业主题配色、企业Logo、核心文化标语镌刻。</li>
+                        <li><strong>捐赠场景</strong>：采用"联合品牌"设计，展示受赠机构（如学校、社区）的名称/Logo，同时体现捐赠企业的品牌元素和公益标语。</li>
+                    </ul>
+                    
+                    <h4>功能模块化选择</h4>
+                    <ul>
+                        <li><strong>基础功能</strong>：人体感应，自动开合，内置垃圾袋。</li>
+                        <li><strong>升级功能</strong>：自动打包换袋、满溢报警、物联网数据管理。</li>
+                        <li><strong>特定场景功能</strong>：超声波驱鼠（适用于车间、食堂）、加强静音模式（适用于办公区）、儿童友好型设计（适用于捐赠学校）。</li>
+                    </ul>
+                </div>
+                
+                <div class="modal-section">
+                    <h3>应用场景拓展</h3>
+                    <ul>
+                        <li><strong>企业内部场景（自用）</strong>：开放办公区、行政前台、独立办公室、生产车间、员工食堂、研发中心、企业展厅。</li>
+                        <li><strong>社会公益场景（捐赠）</strong>：乡村/城市学校、公益基金会、社区活动中心、公园、图书馆、敬老院等。</li>
+                    </ul>
+                </div>
+                
+                <div class="modal-section">
+                    <h3>预期效益</h3>
+                    <p>研究表明，实施此类员工关怀与公益结合项目的企业，其员工归属感与公众品牌好感度可分别提升25%与34%，有效增强企业凝聚力与社会形象。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 打开模态窗口函数
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'flex';
+            document.body.style.overflow = 'hidden'; // 防止背景滚动
+        }
+        
+        // 关闭模态窗口函数
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+            document.body.style.overflow = 'auto'; // 恢复滚动
+        }
+        
+        // 点击模态窗口外部关闭
+        window.addEventListener('click', function(event) {
+            const modals = document.querySelectorAll('.modal-overlay');
+            modals.forEach(modal => {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+        
+        // 按ESC键关闭模态窗口
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                const modals = document.querySelectorAll('.modal-overlay');
+                modals.forEach(modal => {
+                    modal.style.display = 'none';
+                });
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('全域境智能垃圾收运体系网站已加载');
+            
+            // 为营销计划链接添加平滑滚动效果
+            const activityLinks = document.querySelectorAll('.plans-list a');
+            activityLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    // 已经在链接的onclick属性中处理了模态窗口打开
+                });
+            });
+            
+            // 为快速链接添加平滑滚动效果
+            const navLinks = document.querySelectorAll('.links-list a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    if(targetId && targetId !== 'top') {
+                        const targetSection = document.getElementById(targetId);
+                        if(targetSection) {
+                            window.scrollTo({
+                                top: targetSection.offsetTop - 80,
+                                behavior: 'smooth'
+                            });
+                        }
+                    } else {
+                        // 首页链接
+                        window.scrollTo({
+                            top: 0,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // 为特征卡片添加动画效果
+            const features = document.querySelectorAll('.feature');
+            features.forEach((feature, index) => {
+                feature.style.opacity = '0';
+                feature.style.transform = 'translateY(30px)';
+                
+                setTimeout(() => {
+                    feature.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                    feature.style.opacity = '1';
+                    feature.style.transform = 'translateY(0)';
+                }, 150 * index);
+            });
+        });
+    </script>
+</body>
+</html>
